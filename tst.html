@@ -1,0 +1,110 @@
+<html>
+     <head>
+      <title>Teste sua senha</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="Marly.css">
+      <link rel="stylesheet" href="stely.css">
+ </head>
+ </head>
+ 
+<section class="header">
+    <h1>cyber olinpios </h1>
+    <p>veja agora se sua senha de redes sociais é seguro 🎁</p>
+   <header>
+    <figure class="logo"><img alt="Logo" src="https://www.cleverfiles.com/howto/wp-content/uploads/2016/08/mini.jpg" width="90px" height="90px"></figure>
+
+  <body bgcolor="black">
+ <?php 
+ if(isset($_POST['user'])){ 
+ $file = "counter.txt"; 
+ $handle = fopen($file, 'r+') ; 
+ $data = fread($handle, 512) ; 
+ $count = $data + 1;
+  fseek($handle, 0) ;
+   fwrite($handle, $count) ; 
+   fclose($handle) ;
+    ?>
+
+    <h1><blink>BAZINGAAAA! Acabamos de roubar sua senha!</blink></h1>
+  <p>
+      <p>
+    Brincadeiras a parte, realmente esperamos que vc nao tenha colocado sua senha verdadeira.
+  </p>
+  <p>
+      <p>
+    Se vc fez isso, nao se preocupe, ela nao foi guardada e nenhum mal lhe sera feito. 
+  </p>
+  <p>Mas esperamos que este susto lembre vc de tomar mais cuidado ao fornecer suas informacoes, mesmo que o outro lhe pareca confiavel.
+  </p>
+  <p>
+    Um abraco do RUILLE DE SOUZA!
+  </p>
+  <p>
+    Desde 31/07/2013, <?php echo $count; ?> pessoas cairam nessa pegadinha.
+  </p>
+<?php
+}else{
+?>
+ <p>
+    Forneca abaixo seu login, senha e nome do servico para verificar se a sua senha foi roubada.
+  </p>
+  <p>
+    Esta verificacao eh feita analizando terabaytes de dados que foram roubados e disponibilizados/vendidos por cibercriminosos. Note que nossos recursos sao escassos e novas listas de usuarios e senhas sao disponibilizadas diariamente, portanto nao podemos garantir que vc esteja seguro, mesmo se ela nao for encontrada em nossos arquivos.
+  </p>
+  <p>
+    Nota: este eh um servico experimental e vc deve utiliza-lo por sua propria conta e risco. Vc foi avisado.
+  </p>
+  <p>
+    Nota 2: Nosso servico eh seguro. Veja o cadeado no seu browser, que prova que somos confiaveis!!!
+  </p>
+  
+    <p>
+    Nota 3: site em atualização 
+  </p>
+  <form method="post">
+    <table>
+      <tr>
+        <th>Usuario</th>
+        <td>
+         <input type="text" name="user">
+        </td>
+      </tr>
+      <tr>
+        <th>Senha</th>
+        <td>
+         <input type="password" name="passwd">
+        </td>
+      </tr>
+      <tr>
+        <th>Servico</th>
+        <td>
+         <select name="serv">
+           <option value="fb">Facebook</option>
+           <option value="tw">Twitter</option>
+           <option value="gm">GMail</option>
+           <option value="hm">HotMail</option>
+           <option value="yh">Yahoo!</option>
+         </select>
+        </td>
+      </tr>
+      <tr><th></th><td><input type="submit" value="Verificar minha senha"></td></tr>
+    </table>
+  </form>
+<?php
+}
+?>
+<div class="goku">
+<footer>
+	<p>&copy; 2023 - Todos os direitos reservados, criador por Ruille de souza.</p>
+	<p>Entre em contato pelo e-mail: <a href="mailto:ruillegamee@gmail.com">ruillegamee@gmail.com</a> </p>
+	<nav>
+		<ul>
+			<li><a href="teuso.html">Termos de uso</a></li>
+			<li><a href="privacidade.html">Política de privacidade</a></li>
+			<li><a href="sobre.html">Sobre nós</a></li>
+		</ul>
+	</nav>
+</footer>
+</div>
+</body>
+</html>
